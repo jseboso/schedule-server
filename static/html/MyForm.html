@@ -1,0 +1,95 @@
+<!-- Sebas Osorio -->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Submit Form</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./MySchedule.html">My Schedule</a></li>
+                <li><a href="./AboutMe.html">About Me</a></li>
+                <li><a class="current-page" href="./MyForm.html">Form Input</a></li>
+                <li><a href="./SubmissionHistory.html">Submission History</a></li>
+                <li><a href="./stockQuotes.html">My Stock</a></li>
+                <li><a href="./MyServer.html">My Server</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1 class="banner">Form Input</h1>
+    </div>
+    <div id="flexFormMapContainer">
+        <div id="formDiv">
+            <form action="./EventLog.html" target="_blank" method="POST">
+                <p>
+                    <label for="event-name">Event</label>
+                    <input type="text" pattern="[A-Za-z0-9 ]*" title="Only letters, numbers, and spaces allowed."
+                        id="event-name" name="eventname" required>
+                </p>
+                <p>
+                    <label for="day-of-week">Day of Week</label>
+                    <select id="day-of-week" name="dayofweek" required>
+                        <option value="">Choose</option>
+                        <option value="Sun">Sun</option>
+                        <option value="Mon">Mon</option>
+                        <option value="Tue">Tue</option>
+                        <option value="Wed">Wed</option>
+                        <option value="Thur">Thur</option>
+                        <option value="Fri">Fri</option>
+                        <option value="Sat">Sat</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="start-time">Start</label>
+                    <input type="time" id="start-time" name="starttime" required>
+                </p>
+                <p>
+                    <label for="end-time">End</label>
+                    <input type="time" id="end-time" name="endtime" required>
+                </p>
+                <p>
+                    <label for="phone-number">Phone</label>
+                    <input type="text" id="phone-number" name="phonenumber" required>
+                </p>
+                <p>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" required>
+                    <script>
+                        function init() {
+                            var input = document.getElementById('location');
+                            var autocomplete = new google.maps.places.Autocomplete(input);
+                        }
+                    </script>
+                </p>
+                <p>
+                    <label for="extra-info">Extra Info</label>
+                    <input type="text" id="extra-info" name="extrainfo" required>
+                </p>
+                <p>
+                    <label for="url">Enter URL for the Extra Info</label>
+                    <input type="url" id="url" name="url" required>
+                </p>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+        </div>
+        <div id="smallMapDiv">
+            <div id="map"></div>
+            <script src="../js/mapsForm.js"></script>
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap"
+                async defer>
+                </script>
+        </div>
+    </div>
+</body>
+
+</html>

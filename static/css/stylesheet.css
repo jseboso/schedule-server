@@ -1,0 +1,311 @@
+/* Stylesheet - Sebas Osorio */
+
+.banner {
+    padding: 15px;
+    margin: 10px 0;
+    max-width: 100%;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 10px;
+}
+
+.profile-pic {
+    width: 300px;
+}
+
+body {
+    font-family: 'Trebuchet MS';
+}
+
+/* SCHEDULE TABLE ELEMENTS */
+/* ----------------------- */
+.table-container {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.table-container th,
+.table-container td {
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: #197bd6;
+    color: white;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+    background-color: #cde7ff;
+}
+
+.schedule-container {
+    max-width: 100%;
+    max-height: 60%;
+    height: 100%
+}
+
+.side-image-container {
+    padding: 40px;
+
+    width: 30%;
+    /* height: ; */
+    max-height: 40%;
+    float: left;
+
+}
+
+.table-container {
+    width: 60%;
+    height: 60%;
+    float: left;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+}
+
+/* ------------------ */
+/* END TABLE ELEMENTS */
+
+/* CLOCK ELEMENTS */
+/* -------------- */
+
+.clock-table {
+    margin-left: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.clock-table th,
+.clock-table td {
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.clock-table th {
+    background-color: #197bd6;
+    color: white;
+}
+
+.clock-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ------------------ */
+/* END CLOCK ELEMENTS */
+
+.hoverImage {
+    width: 70px;
+}
+
+.bottomAbout td {
+    vertical-align: top;
+    padding: 15px;
+}
+
+.banner-smaller {
+    height: 30px;
+    width: 40%;
+    vertical-align: middle;
+    text-align: left;
+    padding: 8px;
+    background-color: #197bd6;
+    color: white;
+    border-radius: 4px;
+
+}
+
+/* FORM ELEMENTS */
+/* ------------- */
+input[type=text],
+input[type=url],
+input[type=time],
+/* input[type=radio], */
+select {
+    box-sizing: border-box;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 8px;
+}
+
+input[type=submit] {
+    width: 200px;
+    background-color: #197bd6;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset] {
+    width: 200px;
+    background-color: #ff7a7a;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ----------------- */
+/* END FORM ELEMENTS */
+
+/* NAVBAR ELEMENTS */
+/* --------------- */
+nav ul {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+
+    /* remove formatting */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #353535;
+}
+
+nav ul li {
+    float: left;
+    border-right: 1px solid #929292;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* hovering over nav item */
+nav ul li a:hover {
+    background-color: #242424;
+}
+
+/* current nav page */
+.current-page {
+    background-color: #197bd6;
+}
+
+/* ------------------- */
+/* END NAVBAR ELEMENTS */
+
+/* Google Maps */
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#mapsContainer {
+    float: inline-start;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    padding: 0px;
+
+    margin-bottom: 20px;
+}
+
+#mapsStretcher {
+    display: flex;
+    width: 65%;
+}
+
+#mapInterface {
+    /* padding: 16px; */
+    margin-left: 16px;
+    margin-bottom: 20px;
+    /* padding-left: 10px; */
+    float: left;
+    width: 30%;
+    height: 600px;
+    /* background-color: #f2f2f2; */
+}
+
+#placeSearchBox,
+#directionSearchBox {
+    padding: 10px;
+    background-color: #f2f2f2;
+    width: 100%;
+}
+
+#directionSearchBox {
+    margin-top: 10px;
+}
+
+#sidebar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#sidebar {
+    flex: 0 1 auto;
+    padding: 0;
+}
+
+#sidebar>div {
+    padding: 0.5rem;
+}
+
+#formDiv {
+    /* display: flex; */
+    float: left;
+    width: 35%;
+    height: 100%;
+    margin-left: 40px;
+}
+
+#flexFormMapContainer {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    
+}
+
+#smallMapDiv {
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 60%
+}
+
+#operator, #digit1, #digit2 {
+    width: 7%;
+    /* margin: 0px; */
+}
+
+#search-source {
+    width: 8%
+}

@@ -1,0 +1,68 @@
+<!-- Sebas Osorio -->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Stock</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="../js/stocks.js"></script>
+    <script>
+
+        var stocks = new Stocks('{{STOCK_API_KEY}}');
+
+
+        async function retrieveStockQuotes() {
+            var stockSymbol = document.querySelector('input[name="stockSymbol"]').value;
+            console.log("stock symbol: " + stockSymbol);
+            stocks.timeSeries({
+                symbol: stockSymbol,
+                interval: 'weekly',
+                amount: 10
+            })
+                .then(response => {
+                    console.log(response);
+                    document.getElementById("apiResponse").value = JSON.stringify(response);
+
+                })
+                .catch(error => {
+                    console.error(error);
+                })
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./MySchedule.html">My Schedule</a></li>
+                <li><a href="./AboutMe.html">About Me</a></li>
+                <li><a href="./MyForm.html">Form Input</a></li>
+                <li><a href="./SubmissionHistory.html">Submission History</a></li>
+                <li><a class="current-page" href="./stockQuotes.html">My Stock</a></li>
+                <li><a href="./MyServer.html">My Server</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1 class="banner">My Stock</h1>
+    </div>
+    <div id="formDiv">
+        <form onsubmit="event.preventDefault(); retrieveStockQuotes()">
+            <p>
+                <label for="stockSymbol">Enter Stock Symbol:</label>
+                <input type="text" pattern="[A-Za-z0-9 ]*" title="Only letters, numbers, and spaces allowed."
+                    id="stockSymbol" name="stockSymbol" required>
+            </p>
+            <input type="submit" value="Get Stock Data">
+        </form>
+        <p>
+            API Response:
+        </p>
+        <textarea id="apiResponse" rows="20" cols="50"></textarea>
+    </div>
+</body>
+
+</html>

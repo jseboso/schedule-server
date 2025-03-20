@@ -1,0 +1,233 @@
+<!-- Sebas Osorio -->
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width">
+   <title>My Weekly Schedule</title>
+   <link rel="stylesheet" href="../css/stylesheet.css">
+   <script>
+      // Schedule image functions
+      function showImage(src, alt) {
+         var sideImage = document.getElementById("hover-image");
+         sideImage.src = src;
+         sideImage.alt = alt;
+      }
+
+      function assignImage(id, src) {
+         var line = document.getElementById(id);
+         line.innerHTML = "<img class='hoverImage' src=" + src + ">";
+      }
+
+      function removeImage(id) {
+         var line = document.getElementById(id);
+         line.innerHTML = "";
+      }
+
+   </script>
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a class="current-page" href="./MySchedule.html">My Schedule</a></li>
+            <li><a href="./AboutMe.html">About Me</a></li>
+            <li><a href="./MyForm.html">Form Input</a></li>
+            <li><a href="./SubmissionHistory.html">Submission History</a></li>
+            <li><a href="./stockQuotes.html">My Stock</a></li>
+            <li><a href="./MyServer.html">My Server</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <div>
+      <h1 class="banner"> My Weekly Schedule</h1>
+   </div>
+
+   <div class="schedule-container">
+      <table class="table-container">
+         <thead>
+            <tr>
+               <th>Day</th>
+               <th>Event</th>
+               <th>Time</th>
+               <th>Event Location</th>
+               <th>Phone Number</th>
+               <th>URL</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <tr onmouseover="showImage('../img/and_hall.jpg', 'Anderson Hall'); assignImage('img1','../img/and_hall.jpg')"
+               onmouseout="removeImage('img1')">
+               <td>Monday</td>
+               <td>CSCI 4131 Lecture</td>
+               <td>11:15AM-12:30PM</td>
+               <td>Anderson Hall 370, 257 S 19th Ave, Minneapolis, MN 55455
+                  <p id="img1"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/7906541">CSCI 4131 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/Bruininks.jpg', 'Bruininks Hall'); assignImage('img3','../img/Bruininks.jpg')"
+               onmouseout="removeImage('img3')">
+               <td>Tuesday</td>
+               <td>CSCI 5115 Lecture</td>
+               <td>1PM-2:15PM</td>
+               <td>Bruiniks Hall 312, 222 Pleasant St SE, Minneapolis, MN 55455
+                  <p id="img3"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/0021901">CSCI 5115 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/smith.jpg', 'Smith Hall'); assignImage('img4','../img/smith.jpg')"
+               onmouseout="removeImage('img4')">
+               <td>Tuesday</td>
+               <td>CSCI 4611 Lecture</td>
+               <td>2:30PM-3:45PM</td>
+               <td>Smith Hall 100, 207 Pleasant St SE, Minneapolis, MN 55455
+                  <p id="img4"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/8103621">CSCI 4611 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/coffman.jpg', 'Coffman Memorial Union'); assignImage('img5','../img/coffman.jpg')"
+               onmouseout="removeImage('img5')">
+               <td>Tuesday</td>
+               <td>Mi Gente Board Meeting</td>
+               <td>6PM-7:30PM</td>
+               <td>Coffman Memorial Union 211, 300 Washington Ave SE, Minneapolis, MN 55455
+                  <p id="img5"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://linktr.ee/MIGENTEUMN">Mi Gente LSCC Site</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/and_hall.jpg', 'Anderson Hall'); assignImage('img6','../img/and_hall.jpg')"
+               onmouseout="removeImage('img6')">
+               <td>Wednesday</td>
+               <td>CSCI 4131 Lecture</td>
+               <td>11:15AM-12:30PM</td>
+               <td>Anderson Hall 370, 257 S 19th Ave, Minneapolis, MN 55455
+                  <p id="img6"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/7906541">CSCI 4131 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/Bruininks.jpg', 'Bruininks Hall'); assignImage('img8','../img/Bruininks.jpg')"
+               onmouseout="removeImage('img8')">
+               <td>Thursday</td>
+               <td>CSCI 5115 Lecture</td>
+               <td>1PM-2:15PM</td>
+               <td>Bruiniks Hall 312, 222 Pleasant St SE, Minneapolis, MN 55455
+                  <p id="img8"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/0021901">CSCI 5115 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/smith.jpg', 'Smith Hall'); assignImage('img9','../img/smith.jpg')"
+               onmouseout="removeImage('img9')">
+               <td>Thursday</td>
+               <td>CSCI 4611 Lecture</td>
+               <td>2:30PM-3:45PM</td>
+               <td>Smith Hall 100, 207 Pleasant St SE, Minneapolis, MN 55455
+                  <p id="img9"></p>
+               </td>
+               <td>N/A</td>
+               <td><a href="https://umtc.catalog.prod.coursedog.com/courses/8103621">CSCI 4611 Info</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/breakfast.jpg', 'Breakfast'); assignImage('img11','../img/breakfast.jpg')"
+               onmouseout="removeImage('img11')">
+               <td>Saturday</td>
+               <td>Breakfast</td>
+               <td>11AM-12PM</td>
+               <td>1682 Lexington Ave N, Roseville, MN 55113
+                  <p id="img11"></p>
+               </td>
+               <td>(651) 487-5397</td>
+               <td><a href="https://keyscafe.com/restaurants/roseville/">Key's Cafe & Bakery Site</a></td>
+            </tr>
+            <tr onmouseover="showImage('../img/rec.jpg', 'Rec Center'); assignImage('img12','../img/rec.jpg')"
+               onmouseout="removeImage('img12')">
+               <td>Sunday</td>
+               <td>Gym</td>
+               <td>12PM-1PM</td>
+               <td>123 SE Harvard St, Minneapolis, MN 55455
+                  <p id="img12"></p>
+               </td>
+               <td>(612) 626-9222</td>
+               <td><a href="https://recwell.umn.edu/">University Rec Center Site</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="side-image-container">
+         <img id="hover-image" src="../img/gophers-mascot.png" alt="Goldy Gopher">
+      </div>
+
+   </div>
+   <div id="mapsContainer">
+      <div id="mapsStretcher">
+         <div id="sidebar"></div>
+         <div id="map"></div>
+         <!-- All of google maps functions and methods -->
+         <script src="../js/mapsSchedule.js"></script>
+         <script
+            src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places&callback=initMap"
+            async defer>
+            </script>
+
+      </div>
+      <div id="mapInterface">
+         <div id="placeSearchBox">
+            <form onsubmit="deleteMarkers(); placeSearch(event)">
+               <p>
+                  <label for="place-type">Find</label>
+                  <select id="place-type" name="placeType" onchange="toggleSearchKeyword()" required>
+                     <option value="">Choose</option>
+                     <option value="restaurant">Restaurant</option>
+                     <option value="hospital">Hospital</option>
+                     <option value="parking">Parking</option>
+                     <option value="supermarket">Supermarket</option>
+                     <option value="other">Other</option>
+                  </select>
+               </p>
+               <p>
+                  <label for="search-keyword"></label>
+                  <input type="text" id="search-keyword" name="searchKeyword" value="Enter Other Places" disabled
+                     required>
+               </p>
+               <p>
+                  <label for="range">In range (meters)</label>
+                  <input type="text" pattern="[0-9]*" title="Only numbers allowed." id="range" name="range" required>
+                  <!-- <label for="range">meters</label> -->
+               </p>
+               <input type="submit" value="Search">
+            </form>
+         </div>
+         <div id="directionSearchBox">
+            <form onsubmit="deleteMarkers(); recieveDirections(event, destination.value)">
+               <p>
+                  <label for="destination">Destination</label>
+                  <input type="text" id="destination" name="destination" required>
+               </p>
+               <p>
+                  Method of Transportation:
+               </p>
+               <p>
+                  <label for="transport1">Walking</label>
+                  <input type="radio" id="transport1" name="transport" value="WALKING" checked><br>
+                  <label for="transport2">Driving</label>
+                  <input type="radio" id="transport2" name="transport" value="DRIVING"><br>
+                  <label for="transport3">Transit</label>
+                  <input type="radio" id="transport3" name="transport" value="TRANSIT">
+               </p>
+               <input type="submit" value="Go">
+            </form>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>

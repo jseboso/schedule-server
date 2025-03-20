@@ -1,0 +1,103 @@
+<!-- Sebas Osorio -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>MyServer</title>
+  <link rel="stylesheet" href="../css/stylesheet.css">
+  <style>
+    div {
+      text-align: center;
+      margin-bottom: 5%;
+    }
+
+    #links ul li {
+      display: inline;
+      margin-right: 30px;
+    }
+
+    label {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./MySchedule.html">My Schedule</a></li>
+        <li><a href="./AboutMe.html">About Me</a></li>
+        <li><a href="./MyForm.html">Form Input</a></li>
+        <li><a href="./SubmissionHistory.html">Submission History</a></li>
+        <li><a href="./stockQuotes.html">My Stock</a></li>
+        <li><a class="current-page" href="./MyServer.html">My Server</a></li>
+      </ul>
+    </nav>
+  </header>
+  <center>
+    <h1 class="banner">MyServer Page</h1></br>
+  </center>
+  <div id='links'>
+    <ul>
+      <li> <a href="cute_puppy.html"> Surprise... </a> </li>
+      <li> <a href="cute_puppy_funky_jam.html"> Surprise + music... </a> </li>
+      <li> <a href="funky_jam.html"> Funky Jam MP3</a> </li>
+      <li> <a href="explorer.html"> File Explorer Functionality</a> </li>
+    </ul>
+  </div>
+  <div>
+    <h2>
+      Search
+    </h2>
+    <form action="/redirect" target="_blank" method="GET">
+      <p>
+        <label for="search-term">Search Term:</label>
+        <input type="text" id="search-term" name="searchterm" required>
+      </p>
+      <p>
+        <label for="search-source">Search Source</label>
+        <select id="search-source" name="searchsource" required>
+          <option value="">Choose</option>
+          <option value="google">Google</option>
+          <option value="youtube">YouTube</option>
+        </select>
+        <input type="submit" value="Submit">
+      </p>
+
+    </form>
+    <h2>
+      Calculator
+    </h2>
+    <form action="/calculator" target="_blank" method="GET">
+      <p>
+        <label for="digit1"></label>
+        <input type="text" pattern="[0-9]*" title="Only numbers allowed." id="digit1" name="digit1" required>
+
+        <label for="operator">Operator</label>
+        <select id="operator" name="operator" required>
+          <option value="">Choose</option>
+          <option value="plus">+</option>
+          <option value="minus">-</option>
+          <option value="multiply">*</option>
+          <option value="divide">/</option>
+        </select>
+
+        <label for="digit2"></label>
+        <input type="text" pattern="[0-9]*" title="Only numbers allowed." id="digit2" name="digit2" required>
+
+        <input type="submit" value="Submit">
+      </p>
+    </form>
+  </div>
+  <hr>
+  <div>
+    <a href="MySchedule.html"> Go to MySchedule page</a>
+    <a href="MyForm.html"> Go to MyForm page</a>
+  </div>
+</body>
+
+</html>
